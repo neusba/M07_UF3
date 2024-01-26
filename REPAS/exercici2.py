@@ -2,10 +2,11 @@
 valor = input('Introduce un valor en €')
 iva = input('Introduce el IVA a aplicar entre los siguientes: 4%, 10%, 21%')
 
-total = (int(valor) * int(iva)) / 100
+totalPorcentaje = (int(valor) * int(iva)) / 100
+total = float(valor) + float(totalPorcentaje)
 
-print('El valor introducido por el usuario es: ', valor)
-print('El IVA aplicado es:', iva)
-print('El precio total es: ' , total)
+print('El valor introducido por el usuario es:', valor)
+print('El IVA aplicado es:', iva, '%')
+print('El precio total es:' , total, '€')
 
 
