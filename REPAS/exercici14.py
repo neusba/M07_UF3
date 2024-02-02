@@ -2,15 +2,19 @@
 
 # Orden ascendente de la tupla
 
-numeros = input('Introduce 10 números separados por un espacio cada uno: ')
-    
-numerosArray = numeros.split(' ')
-numerosArray.sort()
+numeros = []
+
+while True:
+    numero = int(input('Introduce un número: '))
+    if (len(numeros) == 9):
+        break
+    numeros.append(numero)
+
+numeros.sort()
 tupla = ()
 
-for i in numerosArray:
+
+for i in numeros:
     tupla = tupla + (int(i),)
 
 print(tupla)
-
-
