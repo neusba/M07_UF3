@@ -3,6 +3,7 @@
 # Orden ascendente de la tupla
 
 numeros = input('Introduce 10 números separados por un espacio cada uno: ')
+    
 numerosArray = numeros.split(' ')
 numerosArray.sort()
 tupla = ()
