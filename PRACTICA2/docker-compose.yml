@@ -1,0 +1,27 @@
+version: '3.1'
+services:
+  db:
+    image: postgres:13
+    container_name: practica2_neus
+    environment:  
+      - POSTGRES_DB=practica2
+      - POSTGRES_PASSWORD=neus1234
+      - POSTGRES_USER=neus2
+    ports:
+      - "5432:5432"
+    volumes:
+      - local_pgdata:/var/lib/postgresql/data
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4
+    ports:
+      - "81:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: neus_ba24@outlook.com
+      PGADMIN_DEFAULT_PASSWORD: neus1234
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+volumes:
+  local_pgdata:
+  pgadmin-data:
+
