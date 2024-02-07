@@ -15,7 +15,7 @@ services:
     image: dpage/pgadmin4
     container_name: pgadmin4
     ports:
-      - "85:85"
+      - "81:80"
     environment:
       PGADMIN_DEFAULT_EMAIL: neus_ba24@outlook.com
       PGADMIN_DEFAULT_PASSWORD: neus1234
