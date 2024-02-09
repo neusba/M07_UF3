@@ -1,16 +1,15 @@
-import psycopg2
+# Archivo para leer la información de la base de datos
+
 import connection
  
-try:
+def read():
     
-    sql = "select * from pets"
+    sql = "SELECT * FROM PETS"
  
     connection.connection.execute(sql)
 
     datos_pets = connection.connection.fetchall()
  
-    print("DATOS:")
-
     for i in datos_pets:
         print("ID: ", i[0], )
         print("Name: ", i[1])
@@ -19,11 +18,3 @@ try:
         print("Tipo: ", i[4])
         print("Color: ", i[5])
 
-
-except (Exception, psycopg2.Error) as error:
-    print("Error al intentar leer los datos", error)
- 
-finally:
-    if connection:
-        connection.conn.close()
-        print("GOODBYE")
