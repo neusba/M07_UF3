@@ -1,3 +1,5 @@
+# En este archivo realizaremos la connexión con la base de datos introduciendo nuestras credenciales
+
 import psycopg2
 
 # Datos para la conexión con la base de datos

@@ -17,11 +17,12 @@ try:
 
 
     # Usamos el método execute() para enviar la query
-    connection.conn.execute(sql)
+    connection.connection.execute(sql)
     # Método para hacer efectivos los cambios en la BBDD
     connection.conn.commit()
 
 except (Exception, psycopg2.Error) as error:
     print("Error:", error)
 finally:
+    print('GOODBYE')
     connection.conn.close()
