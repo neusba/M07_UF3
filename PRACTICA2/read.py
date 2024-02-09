@@ -15,6 +15,6 @@ def read():
         print("Name: ", i[1])
         print("Surname: ", i[2])
         print("Age: ", i[3])
-        print("Tipo: ", i[4])
+        print("Type: ", i[4])
         print("Color: ", i[5])
 

@@ -9,47 +9,44 @@ import update       # U: actualiza una instancia
 import delete       # D: borra una instancia 
 
 try:
-    print('Bienvenido. Vamos a comenzar creando la tabla PETS en caso de que aun no exista...')
+    print('Bienvenido al CRUD. Vamos a comenzar creando la tabla PETS en caso de que aun no exista...')
     create_table.createTable()
 
-    # Ahora insertamos datos en la tabla para asegurarnos que podemos leer algo posteriormente
-    usuario = int(input('Introduce el número 1 si quieres generar los datos.'))
-    while usuario != 1:
-        usuario = int(input('Introduce el número 1!!!!!'))
-        
+    print('Pausita para mirar que la tabla se ha creado correctamente en la bbdd. Pulsa Enter para continuar.')
+    usuario = input('Enter: \n')
+    
+    # Ahora insertamos datos por defecto en la tabla
     create.create()
-    print('Datos insertados correctamente.')
-        
+    print('Datos insertados correctamente. \n')
 
     # Leemos los datos que acabamos de insertar
-    usuario = int(input('Vuelve a introducir el número 1 si quieres leer los datos que se acaban de insertar.'))
-    while usuario != 1:
-        usuario = int(input('Introduce el número 1!!!!!'))
-        
-    print('---------------------------------------------- DATOS -----------------------------------------------:')
+    print('---------------------------------------------- DATOS -------------------------------------------------:')
     read.read()
+    print('----------------------------------------------------------------------------------------------------:\n')
+
+    print('Momento para comprobar los datos insertados en la base de datos. Enter para actualizar.')
+    usuario = input('Enter: \n')
 
     # Actualizamos algunos de los datos que ya tenemos y comprobamos que han cambiado
-    usuario = int(input('Introduce otra vez el número 1 si ahora quieres actualizar los datos de la tabla.'))
-    while usuario != 1:
-        usuario = int(input('Introduce el número 1!!!!!'))
-
     update.update()
-    print('---------------------------------------- DATOS ACTUALIZADOS ----------------------------------------:')
-    read.read() # Leemos lo que acabamos de actualizar
+    print('---------------------------------------- DATOS ACTUALIZADOS ------------------------------------------:')
+    read.read() # Mostramos lo que acabamos de actualizar
+    print('----------------------------------------------------------------------------------------------------:\n')
+
+    print('Miramos la base de datos y vemos que efectivamente algún dato ha cambiado. Enter y pasamos a DELETE.')
+    usuario = input('Enter: \n')
 
     # Eliminados alguna instancia y comprobamos que ya no aparece
-    usuario = int(input('Por último introduce el número 1 si quieres quieres eliminar alguna instancia.'))
-    while usuario != 1:
-        usuario = int(input('Introduce el número 1!!!!!'))
-    
     delete.delete()
+    print('---------------------------------------- DATOS SIN LOS ELIMINADOS --------------------------------------:')
     read.read()
+    print('----------------------------------------------------------------------------------------------------:\n')
+
+    print('Vemos que ya ha eliminado una instancia en la base de datos.')
+    print('Como úlitmo paso se elimina la tabla PETS para poder repetir el proceso sin problema. Pulsa Enter para eliminarla y finalizar.\n')
+    usuario = input('Enter: \n')
 
     # Limpiar base de datos para reestablecer
-    usuario = int(input('Por último introduce el número 2 si quieres quieres eliminar la tabla.'))
-    while usuario != 1:
-        usuario = int(input('Introduce el número 2!!!!!'))
     sql = ''' DROP TABLE IF EXISTS pets '''
     connection.connection.execute(sql)
     connection.conn.commit()
