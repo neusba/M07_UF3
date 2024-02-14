@@ -1,1 +1,20 @@
-[Capturas de las operaciones de CRUD](https://drive.google.com/drive/u/2/folders/1IoAUxDI5c0di8aZm-ODIqsGIdxZhBf2I)
+# Imágenes de demostración de CRUD
+
+## Creación de la tabla en la BBDD
+![creaTableBD](capturas/creaTableBD.png)
+
+## Creación de la tabla en la TERMINAL
+![creaTableTerminal](capturas/creatableTerminal.png)
+
+## Función CREATE
+![createBD](capturas/createBD.png)
+
+## Función READ
+![readBD](capturas/readTerminal.png)
+
+## Función UPDATE
+![updateBD](capturas/updateBD.png)
+
+## Función DELETE
+![deleteBD](capturas/deleteBD.png)
+
