@@ -4,7 +4,7 @@
 ![creaTableBD](capturas/creaTableBD.png)
 
 ## Creación de la tabla en la TERMINAL
-![creaTableTerminal](capturas/creatableTerminal.png)
+![creaTableTerminal](../PRACTICA2/capturas/creaTableBD.png)
 
 ## Función CREATE
 ![createBD](capturas/createBD.png)
